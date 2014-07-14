@@ -1,0 +1,10 @@
+# ignore objects and archives, anywhere in the tree.
+.DS_Store
+.git/
+*.iml
+*.ipr
+*.iws
+build/
+out/
+.gradle/
+*.swp

@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+compile('org.slf4j:slf4j-simple:1.6.1',
+    'log4j:log4j:1.2.17')
+testCompile 'junit:junit-dep:4.11'
+}
+
+
+
+task hello << {
+    println 'hello world!'
+}
+
+task hello1(dependsOn: hello) << {
+}
+
+task (runMain, dependsOn: 'classes', type: JavaExec) {
+    main = 'HelloWorld'
+    classpath = sourceSets.main.runtimeClasspath
+    args ''
+}
