@@ -17,5 +17,6 @@ public class HelloWorld {
     private void printLog() {
         Logger logger = LoggerFactory.getLogger(HelloWorld.class);
         logger.info("Hello World logger information.");
+        logger.error("Error Message!");
     }
 }
