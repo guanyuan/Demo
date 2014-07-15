@@ -11,12 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class HelloWorld extends HttpServlet{
+public class HelloWorldServlet extends HttpServlet{
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
         // Actual logic goes here.
         PrintWriter out = response.getWriter();
-        out.println("<h1>" + "Hello World" + "</h1>");
+        HelloWorld helloWorld = new HelloWorld();
+        out.println("<h1>" + helloWorld.sayHello() + "</h1>");
     }
 }
