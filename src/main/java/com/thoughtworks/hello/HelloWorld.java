@@ -4,19 +4,19 @@ package com.thoughtworks.hello;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class HelloWorld {
-	public static void main(String[] args) {
-        System.out.println("hello World!");
-	}
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
-    public String sayHello() {
-        printLog();
-        return "hello";
-    }
-
-    private void printLog() {
-        Logger logger = LoggerFactory.getLogger(HelloWorld.class);
-        logger.info("Hello World logger information.");
-        logger.error("Error Message!");
+public class HelloWorld extends HttpServlet{
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException
+    {
+        // Actual logic goes here.
+        PrintWriter out = response.getWriter();
+        out.println("<h1>" + "Hello World" + "</h1>");
     }
 }

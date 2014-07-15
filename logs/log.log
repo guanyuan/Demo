@@ -18,3 +18,5 @@
 2014-07-14 22:10:38 [ main:4 ] - [ ERROR ] Error Message!
 2014-07-14 22:11:14 [ main:0 ] - [ INFO ] Hello World logger information.
 2014-07-14 22:11:14 [ main:4 ] - [ ERROR ] Error Message!
+2014-07-15 09:33:29 [ Test worker:0 ] - [ INFO ] Hello World logger information.
+2014-07-15 09:33:29 [ Test worker:14 ] - [ ERROR ] Error Message!

@@ -1,5 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'war'
+apply plugin: 'jetty'
 
 repositories {
     mavenCentral()
@@ -7,24 +9,10 @@ repositories {
 
 
 dependencies {
+    providedCompile 'javax.servlet:servlet-api:2.5'
     compile(
             'org.slf4j:slf4j-api:1.7.7',
             'org.slf4j:slf4j-log4j12:1.7.7'
     )
-testCompile 'junit:junit:4.11'
-}
-
-
-
-task hello << {
-    println 'hello world!'
-}
-
-task hello1(dependsOn: hello) << {
-}
-
-task (runMain, dependsOn: 'classes', type: JavaExec) {
-    main = 'HelloWorld'
-    classpath = sourceSets.main.runtimeClasspath
-    args ''
+    testCompile 'junit:junit:4.11'
 }
