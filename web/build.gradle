@@ -4,6 +4,6 @@ dependencies {
     providedCompile 'javax.servlet:servlet-api:2.5'
     compile project(':core')
     compile(
-            'spring:spring-web:1.0.2'
+            'org.springframework:spring-webmvc:4.0.6.RELEASE',
     )
 }
