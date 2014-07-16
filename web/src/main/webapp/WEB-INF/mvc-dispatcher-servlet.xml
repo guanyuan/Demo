@@ -14,4 +14,6 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
+    <bean id="numCalculatorBean" class="com.thoughtworks.hello.NumberCalculator"/>
+
 </beans>
