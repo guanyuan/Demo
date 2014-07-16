@@ -9,6 +9,4 @@
     </bean>
 
     <bean id="numCalculatorBean" class="com.thoughtworks.hello.NumberCalculator"/>
-    <bean id="stringCalculatorBean" class="com.thoughtworks.hello.StringCalculator"/>
-
 </beans>

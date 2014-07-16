@@ -15,11 +15,19 @@ public class HelloWorldServlet extends HttpServlet{
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-        PrintWriter out = response.getWriter();
+        response.sendRedirect("display.jsp");
+
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String adder1 = request.getParameter("adder1");
+        String adder2 = request.getParameter("adder2");
 
         ApplicationContext context = (ApplicationContext)getServletContext().getAttribute("context");
         Client client = (Client) context.getBean("clientBean");
-        out.println("<h1>" + (String)getServletContext().getAttribute("name") + "</h1>");
-        out.println("<h1>" + client.add("3", "4") + "</h1>");
+        String result = client.add(adder1, adder2);
+        PrintWriter out = response.getWriter();
+        out.println(result);
     }
 }

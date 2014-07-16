@@ -18,13 +18,6 @@
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>LinkServlet</servlet-name>
-        <servlet-class>com.thoughtworks.hello.LinkServlet</servlet-class>
-    </servlet>
 
-    <servlet-mapping>
-        <servlet-name>LinkServlet</servlet-name>
-        <url-pattern>/link</url-pattern>
-    </servlet-mapping>
+
 </web-app>

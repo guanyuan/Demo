@@ -15,7 +15,6 @@ public class Client {
     }
 
     @Autowired
-    @Qualifier("numCalculatorBean")
     public void setCalculator(ICalculator calculator) {
         this.calculator = calculator;
     }
