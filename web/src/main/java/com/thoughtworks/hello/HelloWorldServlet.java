@@ -27,7 +27,10 @@ public class HelloWorldServlet extends HttpServlet{
         ApplicationContext context = (ApplicationContext)getServletContext().getAttribute("context");
         Client client = (Client) context.getBean("clientBean");
         String result = client.add(adder1, adder2);
-        PrintWriter out = response.getWriter();
-        out.println(result);
+
+        request.setAttribute("addResult", result);
+        request.getRequestDispatcher("/display.jsp").include(request, response);
+//        PrintWriter out = response.getWriter();
+//        out.println(result);
     }
 }
