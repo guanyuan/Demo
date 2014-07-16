@@ -3,11 +3,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+
     <bean id="clientBean" class="com.thoughtworks.hello.Client">
-        <property name="calculator" ref="numCalculatorBean"/>
     </bean>
 
     <bean id="numCalculatorBean" class="com.thoughtworks.hello.NumberCalculator"/>
-    <bean id="stringCalculatorBean" class="com.thoughtworks.hello.StringCalculator"/>
 
 </beans>
