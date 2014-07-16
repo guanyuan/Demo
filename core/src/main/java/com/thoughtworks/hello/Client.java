@@ -1,6 +1,7 @@
 package com.thoughtworks.hello;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  * Created by yguan on 7/15/14.
@@ -14,6 +15,7 @@ public class Client {
     }
 
     @Autowired
+    @Qualifier("numCalculatorBean")
     public void setCalculator(ICalculator calculator) {
         this.calculator = calculator;
     }
