@@ -1,6 +1,5 @@
 package com.thoughtworks.hello;
 
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -11,15 +10,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class HelloWorldServlet extends HttpServlet{
+/**
+ * Created by yguan on 7/15/14.
+ */
+public class LinkServlet extends HttpServlet{
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
         PrintWriter out = response.getWriter();
-
-        ApplicationContext context = (ApplicationContext)getServletContext().getAttribute("context");
-        Client client = (Client) context.getBean("clientBean");
         out.println("<h1>" + (String)getServletContext().getAttribute("name") + "</h1>");
-        out.println("<h1>" + client.add("3", "4") + "</h1>");
+        ApplicationContext context = (ApplicationContext)getServletContext().getAttribute("context");
+        StringCalculator stringCalculator = (StringCalculator) context.getBean("stringCalculatorBean");
+        out.println("<h1>" + stringCalculator.add("3", "2") + "</h1>");
     }
 }

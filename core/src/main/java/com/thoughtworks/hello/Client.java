@@ -5,13 +5,13 @@ package com.thoughtworks.hello;
  */
 public class Client {
 
-    private ICalculator iCalculator;
+    private ICalculator calculator;
 
     public String add(String adder1, String adder2) {
-        return iCalculator.add(adder1, adder2);
+        return calculator.add(adder1, adder2);
     }
 
     public void setCalculator(ICalculator calculator) {
-        iCalculator = calculator;
+        this.calculator = calculator;
     }
 }

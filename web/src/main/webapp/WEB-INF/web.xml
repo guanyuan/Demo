@@ -3,6 +3,11 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
+    <listener>
+        <listener-class>com.thoughtworks.hello.MyContextListener</listener-class>
+    </listener>
+
+
     <servlet>
         <servlet-name>HelloWorldServlet</servlet-name>
         <servlet-class>com.thoughtworks.hello.HelloWorldServlet</servlet-class>
@@ -10,7 +15,16 @@
 
     <servlet-mapping>
         <servlet-name>HelloWorldServlet</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/hello</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>LinkServlet</servlet-name>
+        <servlet-class>com.thoughtworks.hello.LinkServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LinkServlet</servlet-name>
+        <url-pattern>/link</url-pattern>
+    </servlet-mapping>
 </web-app>
