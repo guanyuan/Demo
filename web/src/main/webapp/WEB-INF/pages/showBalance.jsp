@@ -1,11 +1,6 @@
  <%@ page language="java" contentType="text/html; charset=gb2312"%>
 <html>
     <head>
-        <%
-            String name = request.getAttribute("name").toString();
-            String id = request.getAttribute("id").toString();
-            String balance = request.getAttribute("left").toString();
-        %>
     </head>
 
     <body>
@@ -17,9 +12,9 @@
         </div>
 
         <div style="background-color:#EEEEEE;width:'100%';font-size:14px;">
-            <div style="float:left;width:28%; margin:10px 30px" ><%=id%></div>  <!--以字符串输出后台定义的变量!-->
-            <div style="float:left;width:28%; margin:10px 0px"><%=name%></div>
-            <div style="float:left;width:28%; margin:10px 0px"><%=balance%></div>
+            <div style="float:left;width:28%; margin:10px 30px" >${id}</div>
+            <div style="float:left;width:28%; margin:10px 0px">${name}</div>
+            <div style="float:left;width:28%; margin:10px 0px">${left}</div>
         </div>
     </body>
 </html>
