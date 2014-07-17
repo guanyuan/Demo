@@ -18,8 +18,6 @@ import java.sql.Statement;
 
 @Controller
 public class HelloWorldController{
-    @Autowired
-    private NumberCalculator numberCalculator;
 
     @RequestMapping(value = "/welcome", method = RequestMethod.GET)
     public String showWelcomePage(ModelMap model) {
