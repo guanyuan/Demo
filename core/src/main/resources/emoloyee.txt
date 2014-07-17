@@ -1,0 +1,6 @@
+00001	guanyuan	1.1
+00002	lihongjing	0.2
+00003	zhaolan	        0.7
+00004	chendan	        1.5
+00005	xiefang	        2.1
+00006	pangmin	        0.9
