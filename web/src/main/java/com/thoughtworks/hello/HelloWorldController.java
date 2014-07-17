@@ -32,10 +32,10 @@ public class HelloWorldController{
 
         Connection con = DataManager.getConnection();
         Statement statement = DataManager.getStatement(con);
-        String userSql = "select * from employee where uid = '" + sid + "';"; //查询用户信息
+        String userSql = "select * from employeeInfo where uid = '" + sid + "';"; //查询用户信息
         ResultSet userResult = DataManager.getRs(statement, userSql);
 
-        int left = 2000;   //初始金额
+        double left = 2000;   //初始金额
         String actualName = "";
         String errorStr = "";
 
@@ -47,11 +47,11 @@ public class HelloWorldController{
                 }
                 userResult.close();
 
-                String sql = "select * from budgetTable where uid = '" + sid + "';"; //查询消费记录
+                String sql = "select * from expenseRecords where uid = '" + sid + "';"; //查询消费记录
                 ResultSet result = DataManager.getRs(statement, sql);
                 if (result != null) {
                     while (result.next()) {
-                        left -= result.getInt("cost");
+                        left -= result.getDouble("cost");
                         if (left <= 0) { //余额不能出现负数
                             left = 0;
                             break;

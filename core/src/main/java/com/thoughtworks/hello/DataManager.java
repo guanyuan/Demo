@@ -5,7 +5,8 @@ import java.sql.*;
 public class DataManager {
 
     private final static String DB_DRIVER = "com.mysql.jdbc.Driver";
-    private final static String DB_URL = "jdbc:mysql://localhost:3306/BudgetDatabase";
+    private final static String DB_URL = "jdbc:mysql://localhost:3306/Demo";
+//    private final static String DB_URL = "jdbc:mysql://localhost:3306/BudgetDatabase";
     private final static String DB_NAME = "root";
     private final static String DB_PWd = "";
 
