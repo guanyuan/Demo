@@ -19,7 +19,7 @@
 <body>
 <div style="text-align:center;font-size = 20px">
     <h1 style="color:blue">Budget Query</h1>
-    <form action="QueryForm" method="post" name="information" id="information" onsubmit="return checkId()">
+    <form action="test" method="post" name="information" id="information" onsubmit="return checkId()">
         <div style="margin:10px">
             <span style="padding:20px">name</span>
             <input type="text" name="name" id="name">
