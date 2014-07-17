@@ -15,6 +15,11 @@ public class HelloWorldController{
     @Autowired
     private NumberCalculator numberCalculator;
 
+    @RequestMapping(value = "/welcome", method = RequestMethod.GET)
+    public String showWelcomePage(ModelMap model) {
+        return "index";
+    }
+
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String printHello(ModelMap model) {
         return "display";
