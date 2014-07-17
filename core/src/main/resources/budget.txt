@@ -1,7 +1,0 @@
-B0001	00001	guanyuan	Books	150	null 
-B0002	00002	lihongjing	Training/Education	1500	borrow:chendan:400
-B0003	00003	zhaolan	other	400	null    
-B0004	00004	chendan	Books	70.5	null       
-B0005	00005	xiefang	Books	900	borrow:guanyuan:100,borrow:pangmin:50  
-B0006	00006	pangmin	other	60.5	null
-B0007	00002	lihongjing	other	160.5	null

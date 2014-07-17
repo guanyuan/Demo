@@ -24,6 +24,7 @@ public class HelloWorldController{
         return "index";
     }
 
+
     @RequestMapping(value = "/query", method = RequestMethod.POST)
     public String returnQueryResult(ModelMap model, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name"); //获得用户姓名
@@ -78,4 +79,5 @@ public class HelloWorldController{
             return "showBalance";
         }
     }
+
 }
