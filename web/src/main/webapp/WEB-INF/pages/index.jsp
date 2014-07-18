@@ -34,14 +34,8 @@
     </form>
 </div>
 
-    <%
-        Object msg = request.getAttribute("errorStr");
-        if(msg!=null){
-            msg.toString();
-    %>
-        <div style="color:blue;text-align:center;font-size = 16px"><%=msg%></div>
-    <%
-    }
-    %>
+
+<div style="color:blue;text-align:center;font-size = 16px">${errorMsg}</div>
+
 </body>
 </html>
